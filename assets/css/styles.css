@@ -5,6 +5,14 @@ body{
     /*background-size: auto;*/
 }
 
+.headerStyles{
+
+    background-color: cornflowerblue;
+    display: block;
+    width: 100%;
+
+}
+
 /*.headerTop{*/
 
 
