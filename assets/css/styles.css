@@ -7,14 +7,7 @@ body{
 
 .headerStyles{
 
-    background-color: cornflowerblue;
-    display: block;
     width: 100%;
+    display: inline;
 
 }
-
-/*.headerTop{*/
-
-
-    /*background-color: #251332;*/
-/*}*/
