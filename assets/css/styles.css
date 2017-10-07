@@ -5,9 +5,35 @@ body{
     /*background-size: auto;*/
 }
 
-.headerStyles{
+input{
 
-    width: 100%;
-    display: inline;
+    /*color: ;*/
+    text-decoration: none;
+    border-color: #000032;
+    border-top-style: none;
+    border-radius: 5px;
 
 }
+
+input::placeholder{
+    text-align: left;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.headerStyles{
+
+    /*background-color: red;*/
+
+}
+
+.headerStyles span{
+    font-size: 19px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*#Login, #InputEmail, #InputPassword {*/
+    /*width: 33%;*/
+    /*float: left*/
+/*}*/
