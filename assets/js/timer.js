@@ -1,4 +1,10 @@
+console.log("hello world!");
+$("#bnt_CreateTimer").on("click", function(){
 
+    alert("hello world!");
+
+
+});
 //ADD TIMER: user selects the 'add timer' button (modal popup?)
     //user adds name of timer (has a default name).
     // user selects from radio button (work time or break).

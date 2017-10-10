@@ -32,7 +32,15 @@ input::placeholder{
     font-family: 'Roboto', sans-serif;
 }
 
+.jumbotron{
 
+    background-color: #000032;
+}
+.btn-outline-primary{
+
+    color: white;
+    border-color: white;
+}
 /*#Login, #InputEmail, #InputPassword {*/
     /*width: 33%;*/
     /*float: left*/
