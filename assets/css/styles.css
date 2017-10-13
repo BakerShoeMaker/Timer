@@ -4,7 +4,10 @@ body{
     /*background-image: url("images/niklas-rhose-14302.jpg");*/
     /*background-size: auto;*/
 }
-
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
 input{
 
     /*color: ;*/
@@ -45,3 +48,9 @@ input::placeholder{
     /*width: 33%;*/
     /*float: left*/
 /*}*/
+
+.timerHeadText{
+
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+}

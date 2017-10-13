@@ -1,10 +1,18 @@
-console.log("hello world!");
-$("#bnt_CreateTimer").on("click", function(){
+$("#bnt_CreateTimer").on("click", function()
+    {
+    $("#MainArea").html("");
+    runTimerSetUp();
+    }
 
-    alert("hello world!");
 
 
-});
+)//end CreateButtonTimer
+
+function runTimerSetUp() {
+    alert("hello world! You clicked the button.")
+};
+
+
 //ADD TIMER: user selects the 'add timer' button (modal popup?)
     //user adds name of timer (has a default name).
     // user selects from radio button (work time or break).

@@ -13,14 +13,14 @@
 
     <body>
     <div class = "container-fluid">
-        <!-- Header-->
+    <!-- Header-->
          <div class="row pt-3 m-3 d-flex justify-content-end headerStyles">
                  <!--<button id="SignIn" type="button" class="btn btn-outline-primary mr-3">Sign In</button>-->
                  <!--<button id="SignUp" type="button" class="btn btn-outline-primary">Sign Up</button>-->
 
         </div>
-
-        <!----------- Modal--------------->
+    <!-- Header end -->
+    <!----------- Modal--------------->
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 Launch demo modal
@@ -46,11 +46,11 @@
                     </div>
                 </div>
             </div>
-        <!----------- Modal end--------------->
+    <!----------- Modal end--------------->
 
 
 
-        <!-- Main area-->
+    <!-- Main area for title -->
         <div id ="MainArea" class="col text-center">
             <div class="jumbotron jumbotron-fluid">
                 <div class="container">
@@ -60,16 +60,37 @@
                         Timer</button>
                 </div>
             </div>
+        </div>
+    <!-- Main area for title end -->
 
-            <!--<h1>CREATE MULTIPLE TIMERS EASILY</h1>-->
-            <!--<h2> Keep your class running smoothly with scripted timers!</h2>-->
-            <!--<button type="button" class="btn btn-outline-primary">Sign Up</button>-->
-
+    <!--Timer area -->
+        <!-- Today's schedule 1 x 1-->
+        <div class = "row  ">
+            <div id="TimerTitle" class="col d-flex justify-content-center ">
+                <h1 class="timerHeadText">Today's schedule</h1>
+            </div>
+        </div >
+        <!-- Title 1 x 3-->
+        <div class = "row">
+            <div class="col-2 d-flex justify-content-left"></div>
+            <div id = "TimerInfo" class="col-7"> Name of Timer and Time goes here</div>
+            <div class="col-2"></div>
+        </div>
+        <!-- Progress bar area 1 x 3-->
+        <div class = "row">
+            <div id = "PlayPause" class="col-3 d-flex justify-content-right"><p>Play/plause</p></div>
+            <div id = "ProgressBar" class="col-6 d-flex justify-content-center"><p>ProgrssBar</p></div>
+            <div id = "TimeTicker" class="col-3 d-flex justify-content-left"><p>TimeTicking</p></div>
         </div>
 
 
 
-        <!-- footer-->
+
+
+    <!--Timer area end  -->
+
+
+    <!-- footer-->
         <div class = "col">
 
 
