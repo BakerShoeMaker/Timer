@@ -54,3 +54,13 @@ input::placeholder{
     font-family: "Roboto", sans-serif;
     font-size: 30px;
 }
+#timeTicker p{
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+
+}
+#playPause :hover{
+    transform: scale(1.05);
+    cursor: hand;
+    cursor: pointer;
+}

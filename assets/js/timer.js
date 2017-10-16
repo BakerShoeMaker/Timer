@@ -9,7 +9,10 @@ $("#bnt_CreateTimer").on("click", function()
 )//end CreateButtonTimer
 
 function runTimerSetUp() {
-    alert("hello world! You clicked the button.")
+
+    $("#playPause").html("<img src='play.png' >");
+    $("#timeTicker").html('<p>00:00</p>');
+    $("#ProgressBar").html('<div class = "progress"> <div class="progress-bar w-25" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div> </div>');
 };
 
 
