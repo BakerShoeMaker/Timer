@@ -33,9 +33,14 @@ function runTimerSetUp() {
     $("#TimerInfo").html("Session 1");
     $("#playPause").html("<img src='pause.png' >");
     $("#timeTicker").html('<p>00:00</p>');
-    $("#ProgressBar").html('<div class = "progress"> <div class="progress-bar bg-success w-50" role="progressbar"' +
-        'aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div> </div>');
+    $("#ProgressBar").html('<div class="progress">' + '<div class="progress-bar bg-success" role="progressbar"' +
+        ' style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>'+
+        '</div>');
     $("#playPause").on("click", startTimer);
+
+    // <div class="progress">
+    //     <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    //     </div>
 
 
 };
