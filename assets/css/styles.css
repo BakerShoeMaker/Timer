@@ -18,11 +18,11 @@ input{
 
 }
 
-input::placeholder{
-    text-align: left;
-    box-sizing: border-box;
-    padding-left: 10px;
-}
+/*input::placeholder{*/
+    /*text-align: left;*/
+    /*box-sizing: border-box;*/
+    /*padding-left: 10px;*/
+/*}*/
 
 .headerStyles{
 
@@ -56,11 +56,15 @@ input::placeholder{
 }
 #timeTicker p{
     font-family: "Roboto", sans-serif;
-    font-size: 30px;
+    font-size: 50px;
 
 }
 #playPause :hover{
     transform: scale(1.05);
     cursor: hand;
     cursor: pointer;
+}
+#CurentTime{
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
 }
