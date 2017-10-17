@@ -68,3 +68,17 @@ input{
     font-family: "Roboto", sans-serif;
     font-size: 20px;
 }
+
+.pbBottom{
+    background-color: #fffdfd;
+    border-radius: 10px;
+    height: 25px;
+    align-content: center;
+}
+.pbTop{
+    background-color: #ffb342;
+    border-radius: 10px;
+    height: 25px;
+    align-content: center;
+    width: 10%;
+}

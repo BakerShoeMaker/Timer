@@ -1,5 +1,6 @@
 var countDownTime = 5;
 var display = $('#timeTicker');
+var diff, minutes, seconds;
 
 $("#bnt_CreateTimer").on("click",
 
@@ -32,12 +33,9 @@ function runTimerSetUp() {
     $("#CurentTime").html(currentTime);
     $("#TimerInfo").html("Session 1");
     $("#playPause").html("<img src='pause.png' >");
-    $("#timeTicker").html('<p>00:00</p>');
-    $("#ProgressBar").html('<div class="progress">' + '<div class="progress-bar bg-success" role="progressbar"' +
-        ' style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>'+
-        '</div>');
+    $("#timeTicker").html('<div></div>');
     $("#playPause").on("click", startTimer);
-
+    $('#pb').html('<div class="pbBottom"> <div id="pbWidth"class="pbTop"></div></div>');
     // <div class="progress">
     //     <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
     //     </div>
@@ -50,10 +48,8 @@ console.log($("#pb").attr("data-status"));
 //Starts the timer
 function startTimer(duration, display) {
     //https://stackoverflow.com/questions/20618355/the-simplest-possible-javascript-countdown-timer
-    var start = Date.now(),
-        diff,
-        minutes,
-        seconds;
+    var start = Date.now();
+
     function timer()
     {
         // get the number of seconds that have passed since startTimer() was called
@@ -74,14 +70,13 @@ function startTimer(duration, display) {
         }
         if(minutes == 0 && seconds == 0){
             console.log("Times up!");
+            //clearInterval(timer);
             //Stop the timer and start the next timer (if it is available).
         }
 
-        //update progress bar width
-        //$(ProgressBar).attr('w', 'w-'+((countDownTime - diff/countDownTime)*100));
-
         console.log(countDownTime - diff);
-        console.log( $(ProgressBar).attr('w').val());
+        //sets width of progress bar.
+        progressBarWidth();
 
     };
     // we don't want to wait a full second before the timer starts
@@ -89,14 +84,16 @@ function startTimer(duration, display) {
     setInterval(timer, 1000);
 }
 
+function progressBarWidth(){
+    var widthPercentage = (((countDownTime-diff)/countDownTime)*100);
+    var finalWidth= widthPercentage +"%";
+    console.log("Progress Bar width: ", finalWidth);
+    $("#pbWidth").css('width:', finalWidth);
+}
 
-
-
-
-
-
-
-
+//Problems
+// How to make the timer stop when it's finished?
+// How to update the width every second?
 //***************** TIMER START ***********************
 
 //***************** TIMER END ***********************
