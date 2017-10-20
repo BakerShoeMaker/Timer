@@ -82,3 +82,8 @@ input{
     align-content: center;
     width: 10%;
 }
+.modal-body{
+
+    color:black;
+    background-color: #ffb342;
+}
