@@ -1,17 +1,17 @@
 var countDownTime = 5;
-var display = $('#timeTicker');
-var diff, minutes, seconds;
 
-$("#bnt_CreateTimer").on("click",
+
+
+/*$("#bnt_CreateTimer").on("click",
 
     function()
     {
         $("#MainArea").html("");
         runTimerSetUp();
-        startTimer(countDownTime, display); //should work on click only.
+        startTimer(); //should work on click only.
     }
 
-)//end CreateButtonTimer
+)*///end CreateButtonTimer
 
 
 //******************* START ************************
@@ -46,42 +46,37 @@ function runTimerSetUp() {
 console.log($("#pb").attr("data-status"));
 
 //Starts the timer
-function startTimer(duration, display) {
-    //https://stackoverflow.com/questions/20618355/the-simplest-possible-javascript-countdown-timer
-    var start = Date.now();
+function startTimer() {
+    /*var g = 45;
+    var timer = new Timer();
+    $('#chronoExample .startButton').click(function () {
+        //timer.start();
+        timer.start({countdown: true, startValues: {seconds: g}});
+    });
+    $('#chronoExample .pauseButton').click(function () {
+        timer.pause();
+    });
+    $('#chronoExample .stopButton').click(function () {
+        timer.stop();
+    });
+   /!* $('#chronoExample .resetButton').click(function () {
+        timer.reset();
+    });*!/
+    timer.addEventListener('secondsUpdated', function (e) {
+        $('#chronoExample .values').html(timer.getTimeValues().toString());
+    });
+    timer.addEventListener('started', function (e) {
+        $('#chronoExample .values').html(timer.getTimeValues().toString());
+    });
+   /!* timer.addEventListener('reset', function (e) {
+        $('#chronoExample .values').html(timer.getTimeValues().toString());
+    });*!/
 
-    function timer()
-    {
-        // get the number of seconds that have passed since startTimer() was called
-        diff = duration - (((Date.now() - start) / 1000) | 0);
+   //What happens when the event is complete?
+   timer.addEventListener('targetAchieved', function (e) {
+        console.log("THE EVENT IS COMPLETE!!!!!!!");
+    });*/
 
-        // does the same job as parseInt truncates the float
-        minutes = (diff / 60) | 0;
-        seconds = (diff % 60) | 0;
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.html("<p>"+minutes + ":" +seconds +"</p>");
-
-        if (diff <= 0) {
-            // add one second so that the count down starts at the full duration example 05:00 not 04:59
-            start = Date.now() + 1000;
-        }
-        if(minutes == 0 && seconds == 0){
-            console.log("Times up!");
-            //clearInterval(timer);
-            //Stop the timer and start the next timer (if it is available).
-        }
-
-        console.log(countDownTime - diff);
-        //sets width of progress bar.
-        progressBarWidth();
-
-    };
-    // we don't want to wait a full second before the timer starts
-    timer();
-    setInterval(timer, 1000);
 }
 
 function progressBarWidth(){
