@@ -82,8 +82,9 @@ input{
     align-content: center;
     width: 10%;
 }
-.modal-body{
+.modal-body, .modal-footer{
 
-    color:black;
-    background-color: #ffb342;
+    color:dimgrey;
+    background-color: white;
+    font-family: "Roboto", sans-serif;
 }
