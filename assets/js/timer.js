@@ -13,6 +13,18 @@ var countDownTime = 5;
 
 )*///end CreateButtonTimer
 
+$("#bnt_SaveTimes").on('click',
+
+    function()
+    {
+        console.log("You clicked the save button!!");
+        console.log($('#name_1').val());
+        console.log($('#minutes_1').val());
+        console.log($('#transition_1').val());
+    }
+
+)
+
 
 //******************* START ************************
 
@@ -26,7 +38,6 @@ function resumeTime() {
 
 //******************* PAUSE/RESUME ******************
 
-
 function runTimerSetUp() {
     var currentTime = moment().format('MMMM Do YYYY, h:mm:ss a');
     $("#TimerTitle").html("<h1>Today's Schedule</h1>");
@@ -39,8 +50,6 @@ function runTimerSetUp() {
     // <div class="progress">
     //     <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
     //     </div>
-
-
 };
 
 console.log($("#pb").attr("data-status"));

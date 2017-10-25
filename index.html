@@ -13,7 +13,7 @@
 
         <script src="assets/js/easytimer.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script src="easytimer.min.js"></script>
+        <!--<script src="easytimer.min.js"></script>-->
         <script>
             var timerInstance = new Timer();
         </script>
@@ -99,53 +99,253 @@
                                     <div class="col-4 align-middle">
                                           <h6>Break (minutes)</h6>
                                     </div>
-                                    <div class="col-8"><!--Check box -->
+                                    <div class="col-8 "><!--Check box -->
                                         <div class="form-check form-check-inline">
                                             <label class="form-check-label">
                                                 <input class="form-check-input" type="radio"
-                                                       name="inlineRadioOptions" id="inlineRadio1" value="option1"> 3
+                                                       name="inlineRadioOptions" id="Timer_1_checkBox_1"
+                                                       value="option1"> 3
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <label class="form-check-label">
                                                 <input class="form-check-input" type="radio"
-                                                       name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
+                                                       name="inlineRadioOptions" id="Timer_1_checkBox_2"
+                                                       value="option2"> 5
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline ">
                                             <label class="form-check-label">
                                                 <input class="form-check-input" type="radio"
-                                                       name="inlineRadioOptions" id="inlineRadio3" value="option3" > 7
+                                                       name="inlineRadioOptions" id="Timer_1_checkBox_3"
+                                                       value="option3" > 7
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline ">
                                             <label class="form-check-label">
                                                 <input class="form-check-input" type="radio"
-                                                       name="inlineRadioOptions" id="inlineRadio3" value="option3" > 10
+                                                       name="inlineRadioOptions" id="Timer_1_checkBox_4"
+                                                       value="option3" > 10
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline ">
                                             <label class="form-check-label">
                                                 <input class="form-check-input" type="radio"
-                                                       name="inlineRadioOptions" id="inlineRadio3" value="option3" > 15
+                                                       name="inlineRadioOptions" id="Timer_1_checkBox_5"
+                                                       value="option3" > 15
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline ">
                                             <label class="form-check-label">
                                                 <input class="form-check-input" type="radio"
-                                                       name="inlineRadioOptions" id="inlineRadio3" value="option3" > 20
+                                                       name="inlineRadioOptions" id="Timer_1_checkBox_6"
+                                                       value="option3" > 20
                                             </label>
                                         </div>
                                     </div>
                                 </div>
 
                             <!--Timer #2 ------------------------------------------------------------>
+                            <hr>
+                            <div class="row px-3 "> <h5><strong>Timer 2</strong></h5></div>
+                            <div class="row">
+                                <div class="col-7">
+                                    <div class="form-group ">
+                                        <label for="name_2">Name</label>
+                                        <input type="text" class="form-control" id="name_2"
+                                               aria-describedby="name" placeholder="e.g. Warm-up">
+                                        <small class="form-text text-muted">*Transition time is 3
+                                            minutes</small>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="form-group">
+                                        <label for="minutes_1"> Minutes</label>
+                                        <select class="form-control" id="minutes_2">
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                            <option>15</option>
+                                            <option>20</option>
+                                            <option>25</option>
+                                            <option>30</option>
+                                            <option>35</option>
+                                            <option>40</option>
+                                            <option>45</option>
+                                            <option>50</option>
+                                            <option>55</option>
+                                            <option>60</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label for="transition_2"> Transition</label>
+                                        <select class="form-control" id="transition_2">
+                                            <option>No </option>
+                                            <option>Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div><!--end row -->
+
+                            <div class="row">
+                                <div class="col-4 align-middle">
+                                    <h6>Break (minutes)</h6>
+                                </div>
+                                <div class="col-8"><!--Check box -->
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio"
+                                                   name="inlineRadioOptions" id="Timer_2_checkBox_1"
+                                                   value="option1"> 3
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio"
+                                                   name="inlineRadioOptions" id="Timer_2_checkBox_2"
+                                                   value="option2"> 5
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline ">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio"
+                                                   name="inlineRadioOptions" id="Timer_2_checkBox_3"
+                                                   value="option3" > 7
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline ">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio"
+                                                   name="inlineRadioOptions" id="Timer_2_checkBox_4"
+                                                   value="option3" > 10
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline ">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio"
+                                                   name="inlineRadioOptions" id="Timer_2_checkBox_5"
+                                                   value="option3" > 15
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline ">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio"
+                                                   name="inlineRadioOptions" id="Timer_2_checkBox_6"
+                                                   value="option3" > 20
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Timer #3 ------------------------------------------------------------>
+                            <hr>
+                            <div class="row px-3 "> <h5><strong>Timer 3</strong></h5></div>
+                            <div class="row">
+                                <div class="col-7">
+                                    <div class="form-group ">
+                                        <label for="name_3">Name</label>
+                                        <input type="text" class="form-control" id="name_3"
+                                               aria-describedby="name" placeholder="e.g. Warm-up">
+                                        <small class="form-text text-muted">*Transition time is 3
+                                            minutes</small>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="form-group">
+                                        <label for="minutes_3"> Minutes</label>
+                                        <select class="form-control" id="minutes_3">
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                            <option>15</option>
+                                            <option>20</option>
+                                            <option>25</option>
+                                            <option>30</option>
+                                            <option>35</option>
+                                            <option>40</option>
+                                            <option>45</option>
+                                            <option>50</option>
+                                            <option>55</option>
+                                            <option>60</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label for="transition_3"> Transition</label>
+                                        <select class="form-control" id="transition_3">
+                                            <option>No </option>
+                                            <option>Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div><!--end row -->
+
+                            <div class="row">
+                                <div class="col-4 align-middle">
+                                    <h6>Break (minutes)</h6>
+                                </div>
+                                <div class="col-8"><!--Check box -->
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio"
+                                                   name="inlineRadioOptions" id="Timer_3_checkBox_1"
+                                                   value="option1"> 3
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio"
+                                                   name="inlineRadioOptions" id="Timer_3_checkBox_2"
+                                                   value="option2"> 5
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline ">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio"
+                                                   name="inlineRadioOptions" id="Timer_3_checkBox_3"
+                                                   value="option3" > 7
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline ">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio"
+                                                   name="inlineRadioOptions" id="Timer_3_checkBox_4"
+                                                   value="option3" > 10
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline ">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio"
+                                                   name="inlineRadioOptions" id="Timer_3_checkBox_5"
+                                                   value="option3" > 15
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline ">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio"
+                                                   name="inlineRadioOptions" id="Timer_3_checkBox_6"
+                                                   value="option3" > 20
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
                         </form>
 
                     </div><!--modal body -->
-
                     <div class="modal-footer">
-                        <button id = "SaveTimes" type="button" class="btn btn-outline-success btn-block">Start</button>
+                        <button id = "bnt_SaveTimes" type="button" class="btn btn-outline-success btn-block">Start
+                        </button>
                     </div>
 
                 </div>
