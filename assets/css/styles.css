@@ -88,3 +88,18 @@ input{
     background-color: white;
     font-family: "Roboto", sans-serif;
 }
+
+#timeTicker{
+    background-color: #ffb342;
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+
+}
+#ProgressBar{
+    background-color: #b1ff70;
+
+}
+#playPause{
+    background-color: #5ab2ff;
+
+}
