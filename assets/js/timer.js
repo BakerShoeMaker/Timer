@@ -10,16 +10,23 @@ $("#bnt_SaveTimes").on('click',
     {
         console.log("You clicked the save button!!");
         //Assign the form values to variables.
-        //name_1 = $('#name_1').val();
-        //minutes_1 = $('#minutes_1').val();
-
-
+        name_1 = $('#name_1').val();
+        minutes_1 = $('#minutes_1').val();
+        transition_1 = $('#transition_1').val();
+        break_1 = $().val();
         $("#MainArea").html("");
-        //runTimerSetUp();
+
         $('#exampleModal').modal('hide');//Close the modal.
-        //startTimer(); //should work on click only.
+        runTimerSetUp();
     }
 )
+
+//Start the timer when play button is clicked.
+$('#playPause').on('click', function(){
+    console.log("You clicked the play/pause button.");
+    startTimer();
+});
+
 
 function runTimerSetUp() {
 
@@ -30,22 +37,15 @@ function runTimerSetUp() {
 
     //Timer #1
         //Timer graphics
-        //$("#playPause").html("<img src='pause.png' >");
+        $("#playPause").html("<img src='play.png' >");
         //$("#playPause").on("click", startTimer);
         //$('#pb').html('<div class="pbBottom"> <div id="pbWidth"class="pbTop"></div></div>');
 
         //Timer #1 information (grab info from modal)
-        //$('#TimerInfo').html($('#name_1').val());
-        //$('#timeTicker').html($('#name_1').val());
-
-
-
+        $('#TimerInfo').html($('#name_1').val());
+        $('#timeTicker').text(minutes_1 +':00');
     //Timer #2
-
-
     //Timer #3
-
-
 
     // <div class="progress">
     //     <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -56,30 +56,38 @@ console.log($("#pb").attr("data-status"));
 
 //Starts the timer
 function startTimer() {
-    /*var g = 45;
+    var userInputTime = minutes_1 * 60;
+    console.log(userInputTime);
     var timer = new Timer();
-    $('#chronoExample .startButton').click(function () {
+    console.log(timer);
+    $('#timeTicker').click(function () {
         //timer.start();
-        timer.start({countdown: true, startValues: {seconds: g}});
+        timer.start({countdown: true, startValues: {seconds: userInputTime}});
     });
-    $('#chronoExample .pauseButton').click(function () {
+
+    /*$('#chronoExample .pauseButton').click(function () {
         timer.pause();
     });
+
     $('#chronoExample .stopButton').click(function () {
         timer.stop();
     });
-   /!* $('#chronoExample .resetButton').click(function () {
+
+    $('#chronoExample .resetButton').click(function () {
         timer.reset();
-    });*!/
+    });
+
     timer.addEventListener('secondsUpdated', function (e) {
         $('#chronoExample .values').html(timer.getTimeValues().toString());
     });
+
     timer.addEventListener('started', function (e) {
         $('#chronoExample .values').html(timer.getTimeValues().toString());
     });
-   /!* timer.addEventListener('reset', function (e) {
+
+    timer.addEventListener('reset', function (e) {
         $('#chronoExample .values').html(timer.getTimeValues().toString());
-    });*!/
+    });
 
    //What happens when the event is complete?
    timer.addEventListener('targetAchieved', function (e) {
