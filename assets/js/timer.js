@@ -8,7 +8,7 @@ var timer = new Timer();
 
 window.onload = function(){
     startTimer();
-    startTimer2();
+    console.log("timer loaded.");
 
 };
 
@@ -65,10 +65,10 @@ function startTimer() {
 //Starts the timer
     $('#playPause').click(function () {
         //timer.start();
-        console.log("-----------------------------------");
-        console.log("You clicked the play/pause button.");
         timer.start({countdown: true, startValues: {seconds: userInputTime}});
         console.log($("#pb").attr("data-status"));
+        console.log("-----------------------------------");
+        console.log("You clicked the play/pause button.");
     });
 
     /*$('#chronoExample .pauseButton').click(function () {
@@ -133,13 +133,3 @@ function progressBarWidth(){
     //Click the add timer button.
 
 
-function startTimer2() {
-
- //----------------------------------------------------------
-    var g = 300;
-    var timer = new Timer();
-    $('.startButton').click(function () {
-        timer.start();
-        //timer.start({countdown: true, startValues: {seconds: g}});
-    });
-}
