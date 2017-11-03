@@ -3,7 +3,14 @@ var name_1 = "";
 var minutes_1 = "";
 var transition_1 = "";
 var break_1;
+var userInputTime = minutes_1 * 60;
+var timer = new Timer();
 
+window.onload = function(){
+    startTimer();
+    startTimer2();
+
+};
 
 $("#bnt_SaveTimes").on('click',
     function()
@@ -15,17 +22,17 @@ $("#bnt_SaveTimes").on('click',
         transition_1 = $('#transition_1').val();
         break_1 = $().val();
         $("#MainArea").html("");
-
         $('#exampleModal').modal('hide');//Close the modal.
         runTimerSetUp();
+
     }
 )
 
 //Start the timer when play button is clicked.
-$('#playPause').on('click', function(){
+/*$('#playPause').on('click', function(){
     console.log("You clicked the play/pause button.");
-    startTimer();
-});
+    //startTimer();
+});*/
 
 
 function runTimerSetUp() {
@@ -39,7 +46,7 @@ function runTimerSetUp() {
         //Timer graphics
         $("#playPause").html("<img src='play.png' >");
         //$("#playPause").on("click", startTimer);
-        //$('#pb').html('<div class="pbBottom"> <div id="pbWidth"class="pbTop"></div></div>');
+        $('#pb').html('<div class="pbBottom"> <div id="pbWidth"class="pbTop"></div></div>');
 
         //Timer #1 information (grab info from modal)
         $('#TimerInfo').html($('#name_1').val());
@@ -54,47 +61,46 @@ function runTimerSetUp() {
 
 console.log($("#pb").attr("data-status"));
 
-//Starts the timer
 function startTimer() {
-    var userInputTime = minutes_1 * 60;
-    console.log(userInputTime);
-    var timer = new Timer();
-    console.log(timer);
-    $('#timeTicker').click(function () {
+//Starts the timer
+    $('#playPause').click(function () {
         //timer.start();
+        console.log("-----------------------------------");
+        console.log("You clicked the play/pause button.");
         timer.start({countdown: true, startValues: {seconds: userInputTime}});
+        console.log($("#pb").attr("data-status"));
     });
 
     /*$('#chronoExample .pauseButton').click(function () {
-        timer.pause();
-    });
+     timer.pause();
+     });
 
-    $('#chronoExample .stopButton').click(function () {
-        timer.stop();
-    });
+     $('#chronoExample .stopButton').click(function () {
+     timer.stop();
+     });
 
-    $('#chronoExample .resetButton').click(function () {
-        timer.reset();
-    });
+     $('#chronoExample .resetButton').click(function () {
+     timer.reset();
+     });
 
-    timer.addEventListener('secondsUpdated', function (e) {
-        $('#chronoExample .values').html(timer.getTimeValues().toString());
-    });
+     timer.addEventListener('secondsUpdated', function (e) {
+     $('#chronoExample .values').html(timer.getTimeValues().toString());
+     });
 
-    timer.addEventListener('started', function (e) {
-        $('#chronoExample .values').html(timer.getTimeValues().toString());
-    });
+     timer.addEventListener('started', function (e) {
+     $('#chronoExample .values').html(timer.getTimeValues().toString());
+     });
 
-    timer.addEventListener('reset', function (e) {
-        $('#chronoExample .values').html(timer.getTimeValues().toString());
-    });
+     timer.addEventListener('reset', function (e) {
+     $('#chronoExample .values').html(timer.getTimeValues().toString());
+     });
 
-   //What happens when the event is complete?
-   timer.addEventListener('targetAchieved', function (e) {
-        console.log("THE EVENT IS COMPLETE!!!!!!!");
-    });*/
-
+     //What happens when the event is complete?
+     timer.addEventListener('targetAchieved', function (e) {
+     console.log("THE EVENT IS COMPLETE!!!!!!!");
+     });*/
 }
+
 
 function progressBarWidth(){
     var widthPercentage = (((countDownTime-diff)/countDownTime)*100);
@@ -125,3 +131,15 @@ function progressBarWidth(){
 
 // ADDING ANOTHER TIMER: User can add another timer
     //Click the add timer button.
+
+
+function startTimer2() {
+
+ //----------------------------------------------------------
+    var g = 300;
+    var timer = new Timer();
+    $('.startButton').click(function () {
+        timer.start();
+        //timer.start({countdown: true, startValues: {seconds: g}});
+    });
+}
