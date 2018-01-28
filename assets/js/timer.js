@@ -31,7 +31,8 @@ function startTimer() {
      });
 
      timer.addEventListener('secondsUpdated', function (e) {
-     $('#chronoExample .values').html(timer.getTimeValues().toString());
+     //$('#chronoExample .values').html(timer.getTimeValues().toString());
+     $('#chronoExample').html(timer.getTimeValues().toString());
      });
 
      timer.addEventListener('started', function (e) {
