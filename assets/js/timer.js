@@ -71,7 +71,7 @@ function startTimer() {
         console.log("You clicked the play/pause button.");
     });
 
-    /*$('#chronoExample .pauseButton').click(function () {
+    $('#chronoExample .pauseButton').click(function () {
      timer.pause();
      });
 
@@ -98,7 +98,7 @@ function startTimer() {
      //What happens when the event is complete?
      timer.addEventListener('targetAchieved', function (e) {
      console.log("THE EVENT IS COMPLETE!!!!!!!");
-     });*/
+     });
 }
 
 
