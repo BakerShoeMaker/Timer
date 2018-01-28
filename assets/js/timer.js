@@ -1,73 +1,20 @@
 var countDownTime_1 = 5;
 var name_1 = "";
 var minutes_1 = "";
-var transition_1 = "";
-var break_1;
-var userInputTime = minutes_1 * 60;
+
 var timer = new Timer();
 
 window.onload = function(){
     startTimer();
     console.log("timer loaded.");
-
 };
-
-$("#bnt_SaveTimes").on('click',
-    function()
-    {
-        console.log("You clicked the save button!!");
-        //Assign the form values to variables.
-        name_1 = $('#name_1').val();
-        minutes_1 = $('#minutes_1').val();
-        transition_1 = $('#transition_1').val();
-        break_1 = $().val();
-        $("#MainArea").html("");
-        $('#exampleModal').modal('hide');//Close the modal.
-        runTimerSetUp();
-
-    }
-)
-
-//Start the timer when play button is clicked.
-/*$('#playPause').on('click', function(){
-    console.log("You clicked the play/pause button.");
-    //startTimer();
-});*/
-
-
-function runTimerSetUp() {
-
-    var currentTime = moment().format('MMMM Do YYYY, h:mm:ss a');
-    //Top information
-    //$("#TimerTitle").html("<h1>Today's Schedule</h1>");
-    //$("#CurentTime").html(currentTime);
-
-    //Timer #1
-        //Timer graphics
-        $("#playPause").html("<img src='play.png' >");
-        //$("#playPause").on("click", startTimer);
-        $('#pb').html('<div class="pbBottom"> <div id="pbWidth"class="pbTop"></div></div>');
-
-        //Timer #1 information (grab info from modal)
-        $('#TimerInfo').html($('#name_1').val());
-        $('#timeTicker').text(minutes_1 +':00');
-    //Timer #2
-    //Timer #3
-
-    // <div class="progress">
-    //     <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-    //     </div>
-};
-
-console.log($("#pb").attr("data-status"));
 
 function startTimer() {
 //Starts the timer
-    $('#playPause').click(function () {
-        //timer.start();
-        timer.start({countdown: true, startValues: {seconds: userInputTime}});
-        console.log($("#pb").attr("data-status"));
-        console.log("-----------------------------------");
+    //$('#startButton').click(function () {
+    $('#startTimer').click(function () {
+        timer.start();
+        //timer.start({countdown: true, startValues: {seconds: userInputTime}});
         console.log("You clicked the play/pause button.");
     });
 
@@ -99,14 +46,6 @@ function startTimer() {
      timer.addEventListener('targetAchieved', function (e) {
      console.log("THE EVENT IS COMPLETE!!!!!!!");
      });
-}
-
-
-function progressBarWidth(){
-    var widthPercentage = (((countDownTime-diff)/countDownTime)*100);
-    var finalWidth= widthPercentage +"%";
-    console.log("Progress Bar width: ", finalWidth);
-    $("#pbWidth").css('width:', finalWidth);
 }
 
 //Problems
