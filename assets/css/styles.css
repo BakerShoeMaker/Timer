@@ -1,54 +1,73 @@
+/* ------------- Global ---------------- */
 body{
     background-color: #000032;
     color: white;
     /*background-image: url("images/niklas-rhose-14302.jpg");*/
     /*background-size: auto;*/
 }
-p{
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-}
-input{
 
-    /*color: ;*/
+
+/* ------------- Header ---------------- */
+.headerStyles span{
+    font-size: 19px;
+    font-family: 'Roboto', sans-serif;
+}
+
+input{
     text-decoration: none;
+    border-color: #000032;
+    border-top-style: none;
+    border-radius: 5px;
+}
+
+.buttonLogin{
+    text-decoration: none;
+    color: white;
+    background-color: #000032;
     border-color: #000032;
     border-top-style: none;
     border-radius: 5px;
 
 }
 
-/*input::placeholder{*/
-    /*text-align: left;*/
-    /*box-sizing: border-box;*/
-    /*padding-left: 10px;*/
+/*#Login, #InputEmail, #InputPassword {*/
+/*width: 33%;*/
+/*float: left*/
 /*}*/
 
-.headerStyles{
 
-    /*background-color: red;*/
-
-}
-
-.headerStyles span{
-    font-size: 19px;
-    font-family: 'Roboto', sans-serif;
-}
-
+/* ------------- Index page ---------------- */
 .jumbotron{
 
     background-color: #000032;
 }
+.display-4{
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+
+}
+.lead{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
 .btn-outline-primary{
 
     color: white;
     border-color: white;
 }
-/*#Login, #InputEmail, #InputPassword {*/
-    /*width: 33%;*/
-    /*float: left*/
-/*}*/
 
+.btn-outline-primary:hover {
+    background-color: white;
+    color:#000032;
+    border-color: #000032;
+}
+
+/* ------------- Home page ---------------- */
+
+
+
+/* ------------- Timer page ---------------- */
 .timerHeadText{
 
     font-family: "Roboto", sans-serif;
@@ -82,12 +101,6 @@ input{
     align-content: center;
     width: 10%;
 }
-.modal-body, .modal-footer{
-
-    color:dimgrey;
-    background-color: white;
-    font-family: "Roboto", sans-serif;
-}
 
 #timeTicker{
     background-color: #ffb342;
@@ -102,3 +115,27 @@ input{
 #playPause{
     background-color: #5ab2ff;
 }
+/* ------------- Create Timer page ---------------- */
+
+.modal-body, .modal-footer{
+
+    color:dimgrey;
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+}
+/* ------------- Sign-up page ---------------- */
+
+
+/* ------------- My Profile page ---------------- */
+
+
+
+
+
+
+
+
+
+
+
+
