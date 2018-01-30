@@ -30,6 +30,25 @@ input{
 
 }
 
+.nav-item .nav-link{
+    font-size: 19px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+
+}
+.logo-div{
+    background-color: #b1ff70;
+
+}
+.nav-div{
+    background-color: #ffb342;
+
+}
+.div-left{
+    background-color: red;
+}.div-right{
+    background-color: #70b9ff;
+}
 /*#Login, #InputEmail, #InputPassword {*/
 /*width: 33%;*/
 /*float: left*/

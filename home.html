@@ -1,15 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <title>Timer home page </title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="assets/js/loading-bar.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://use.fontawesome.com/0f97643179.js"></script>
+    <script src="assets/js/moment-with-locales.js"></script>
+    <!--<script src="assets/js/easytimer.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-2"></div>
-            <div class="col-8"></div>
-            <div class="col-2"></div>
+            <!--------------------- Header-LogIn Component [START] -------------------------->
+            <div class = "row mr-4 mt-3 ">
+                <div class="col logo-div">
+                    <img src="assets/images/logo.png">
+                </div>
+                <div class="col-11 justify-content-end nav-div">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">My Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Log out</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <!--------------------- Header-LogIn Component [END] -------------------------->
+        </div>
+
+        <div class="row">
+            <div class="col-2 div-left"></div>
+
+            <!--------------------- Table data with classes Component[START] --------------------------->
+
+            <div class="col-8">
+                <h4>My classses</h4>
+                <p>You can make up to five classes.</p>
+                <hr>
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Class</th>
+                        <th scope="col">Timer count</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>US History- Monday</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>US History</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>World History</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>World History-Tuesday</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>AP US History</td>
+                        <td>4</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--------------------- Table data with classes Component[STOP] --------------------------->
+            <div class="col-2 div-right"></div>
 
         </div>
     </div>
