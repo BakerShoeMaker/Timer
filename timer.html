@@ -19,8 +19,8 @@
 <body>
 
     <div class="container">
-            <!--------------------- Header-LogIn Component [START] -------------------------->
-            <div class = "row mr-4 mt-3 ">
+        <!--------------------- Header-LogIn Component [START] -------------------------->
+        <div class = "row mr-4 mt-3 ">
                 <div class="col logo-div">
                     <img src="assets/images/logo.png">
                 </div>
@@ -38,66 +38,54 @@
                     </ul>
                 </div>
             </div>
-            <!--------------------- Header-LogIn Component [END] -------------------------->
+        <!-- Header-LogIn Component [END] -------------------------->
 
-            <!--------------------- Timer Area Component [START] -------------------------->
-            <div class="row">
-                 <div class="col-2"></div>
-               <div class="col-8">
-
-
-            <!--TODO: Put the timer here.-->
-
-
-               </div>
-               <div class="col-2"></div>
+        <!--------------------- TESTING AREA  [START] -------------------------->
+        <div id="chronoExample">
+            <div class="values">00:00:00</div>
+            <div>
+                <button class="pauseButton" >Pause</button>
+                <button class="stopButton">Stop</button>
+                <button class="resetButton">Reset</button>
             </div>
-            <!--------------------- Timer Area Component [END] -------------------------->
+        </div>
+
+        <button class=" startButton">Start</button>
+        <!--TESTING AREA  [END] -------------------------->
+
+        <!--------------------- Timer Area Component [START] -------------------------->
+        <!-- Today's schedule 1 x 1-->
+        <div class="row">
+            <h4>Today's Schedule</h4>
 
         </div>
-    </div>
+
+        <!-- Current Time 1 X 1 -->
+        <div class="row">
+            Current time
+
+        </div>
+
+        <!--  Title 1 X 3 -->
+        <div class="row">
+        tile
 
 
-<!--Timer area -->
-<!-- Today's schedule 1 x 1-->
+        </div>
 
-<div id="chronoExample">
-    <div class="values">00:00:00</div>
-    <div>
-        <button class="pauseButton" >Pause</button>
-        <button class="stopButton">Stop</button>
-        <button class="resetButton">Reset</button>
-    </div>
-</div>
-
-<button class=" startButton">Start</button>
+        <!-- Progress bar area 1 x 3-->
+        <div class="row">
+            Progress bar area
 
 
-<div class = "row ">
-    <div id="TimerTitle" class="col d-flex justify-content-center timerHeadText pb-1 ">
+        </div>
 
-    </div>
-</div >
-<!-- Current Time -->
-<div class = "row ">
-    <div id="CurentTime" class="col d-flex justify-content-center timerHeadText pb-3 ">
+        <!-- Timer Area Component [END] -------------------------->
 
-    </div>
-</div >
-<!-- Title 1 x 3-->
-<div class = "row">
-    <div class="col-3 "></div>
-    <div id = "TimerInfo" class="col-6 d-flex justify-content-left"> </div>
-    <div class="col-3"></div>
-</div>
-<!-- Progress bar area 1 x 3-->
-<div id="ProgressBarRow" class = "row">
-    <div id="playPause"  class="col-3 "><span class="float-right"></span></div>
-    <div id="pb" class="col-6 mt-4 " data-status="off"><span id="ProgressBar"></span></div>
-    <div id="timeTicker" class="col-3 values"></div>
-</div>
+</div> <!--end of containter-->
 
-<!--Timer area end  -->
+
+
 
 </body>
 

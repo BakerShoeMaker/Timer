@@ -17,8 +17,8 @@
 </head>
 
 <body>
-    <div class="container">
-
+<div class="container">
+    <div class="row">
         <!--------------------- Header-LogIn Component [START] -------------------------->
         <div class = "row mr-4 mt-3 ">
             <div class="col logo-div">
@@ -37,69 +37,38 @@
                     </li>
                 </ul>
             </div>
+            <div class="col-1"></div>
         </div>
         <!--------------------- Header-LogIn Component [END] -------------------------->
+    </div>
 
+    <div class="row">
+        <div class="col-2 div-left"></div>
         <!--------------------- Table data with classes Component[START] --------------------------->
-        <!-- Table heading-->
-        <div class="row">
-            <div class="col-2 div-left"></div>
-            <div class="col-4">
-                <h4>My classses</h4>
-                <p>You can make up to five classes.</p>
-            </div>
-            <div class="col-4">
-                <input type="image" src="assets/images/add-timer.png">
-            </div>
-            <div class="col-2 div-right"></div>
+
+        <div class="col-8">
+            <h4>My classses</h4>
+            <p>You can make up to five classes.</p>
+            <hr>
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Class</th>
+                    <th scope="col">Timer count</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <img src="assets/images/no-timers-created.png" class=" mt-3">
         </div>
+        <!--------------------- Table data with classes Component[STOP] --------------------------->
+        <div class="col-2 div-right"></div>
 
-        <!-- Table -->
-        <div class="row">
-            <div class="col-2 "></div>
-            <div class="col-8">
-                <table class="table">
-                    <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Class</th>
-                        <th scope="col">Timer count</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>US History- Monday</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>US History</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>World History</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>World History-Tuesday</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>AP US History</td>
-                        <td>4</td>
-                    </tr>
-                    </tbody>
-                </table>
-
-            </div>
-            <div class="col-2 "></div>
-  </div>
-    <!--------------------- Table data with classes Component[START] --------------------------->
-       </div>
+    </div>
+</div>
 </body>
 
 </html>
