@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <script src="assets/js/loading-bar.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Anton" rel="stylesheet">
     <script src="https://use.fontawesome.com/0f97643179.js"></script>
     <script src="assets/js/moment-with-locales.js"></script>
     <!--<script src="assets/js/easytimer.min.js"></script>-->
@@ -62,25 +62,28 @@
         </div>
 
         <!-- Current Time 1 X 1 -->
-        <div class="row">
+        <div class="row d-flex justify-content-center">
             Current time
 
         </div>
 
-        <!--  Title 1 X 3 -->
-        <div class="row">
-        tile
+        <!-------- Timer start------->
+            <!--  Title 1 X 3 -->
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4 d-flex justify-content-center">Name of timer here</div>
+                <div class="col-4"></div>
+            </div>
+
+            <!-- Progress bar area 1 x 3-->
+            <div class="row">
+                <div class="col-4 d-flex justify-content-end">Play/pause buttons here</div>
+                <div class="col-4 d-flex justify-content-center">===============================</div>
+                <div class="col-4 d-flex justify-content-start div-right timerAreaTextSetTime">3:00</div>
 
 
-        </div>
-
-        <!-- Progress bar area 1 x 3-->
-        <div class="row">
-            Progress bar area
-
-
-        </div>
-
+            </div>
+        <!-------- Timer end------->
         <!-- Timer Area Component [END] -------------------------->
 
 </div> <!--end of containter-->
