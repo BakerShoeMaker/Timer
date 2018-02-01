@@ -5,12 +5,17 @@ body{
     /*background-image: url("images/niklas-rhose-14302.jpg");*/
     /*background-size: auto;*/
 }
-
+hr{
+    background-color: white;
+    /*height: 1px;*/
+    display: block;
+}
 
 /* ------------- Header ---------------- */
 .headerStyles span{
     font-size: 19px;
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
 }
 
 input{
@@ -32,7 +37,8 @@ input{
 
 .nav-item .nav-link{
     font-size: 19px;
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
     color: white;
 
 }
@@ -61,25 +67,30 @@ input{
     background-color: #000032;
 }
 .display-4{
-    font-family: 'Roboto', sans-serif;
-    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-size: 45px;
 
 }
 .lead{
+    /*
     font-family: 'Roboto', sans-serif;
+    */
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
 }
 
 .btn-outline-primary{
-
     color: white;
     border-color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .btn-outline-primary:hover {
-    background-color: white;
-    color:#000032;
-    border-color: #000032;
+    background-color: #080832;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    border-color: white;
 }
 
 .img-no-timers{
@@ -93,11 +104,13 @@ input{
 /* ------------- Timer page ---------------- */
 .timerHeadText{
 
-    font-family: "Roboto", sans-serif;
+    /*font-family: "Roboto", sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
     font-size: 30px;
 }
 #timeTicker p{
-    font-family: "Roboto", sans-serif;
+    /*font-family: "Roboto", sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
     font-size: 50px;
 
 }
@@ -107,7 +120,8 @@ input{
     cursor: pointer;
 }
 #CurentTime{
-    font-family: "Roboto", sans-serif;
+    /*font-family: "Roboto", sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
 }
 
@@ -127,30 +141,52 @@ input{
 
 #timeTicker{
     background-color: #ffb342;
-    font-family: "Roboto", sans-serif;
+    /*font-family: "Roboto", sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
     font-size: 40px;
-
 }
 #ProgressBar{
     background-color: #b1ff70;
-
 }
 #playPause{
     background-color: #5ab2ff;
 }
 
-.timerAreaTextSetTime{
-    font-family: "Anton", sans-serif;
-    font-size: 80px;
 
+.timerAreaTextSetTime-todaysschedule{
+    /*font-family: "Anton", sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+}
+
+.timerAreaTextSetTime-current-time{
+    /*font-family: "Anton", sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+}
+
+.timerAreaTextSetTime-warmup{
+    /*font-family: "Anton", sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+}
+
+.timerAreaTextSetTime{
+    /*font-family: "Anton", sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
+    font-size: 80px;
+}
+.progress-bar{
+    height: 60px;
+    border-radius: 50px;
 }
 /* ------------- Create Timer page ---------------- */
 
 .modal-body, .modal-footer{
-
     color:dimgrey;
     background-color: white;
-    font-family: "Roboto", sans-serif;
+    /*font-family: "Roboto", sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
 }
 /* ------------- Sign-up page ---------------- */
 

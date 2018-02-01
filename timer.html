@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <script src="assets/js/loading-bar.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,700|Anton" rel="stylesheet">
     <script src="https://use.fontawesome.com/0f97643179.js"></script>
     <script src="assets/js/moment-with-locales.js"></script>
     <!--<script src="assets/js/easytimer.min.js"></script>-->
@@ -56,41 +56,57 @@
 
         <!--------------------- Timer Area Component [START] -------------------------->
         <!-- Today's schedule 1 x 1-->
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-center timerAreaTextSetTime-todaysschedule">
             <h4>Today's Schedule</h4>
 
         </div>
 
         <!-- Current Time 1 X 1 -->
-        <div class="row d-flex justify-content-center">
-            Current time
-
+        <div class="row d-flex justify-content-center timerAreaTextSetTime-current-time">
+           11:00 am
         </div>
-
-        <!-------- Timer start------->
+        <hr>
+        <!--------------------------- Progress Bar Component [START]------->
             <!--  Title 1 X 3 -->
             <div class="row">
                 <div class="col-4"></div>
-                <div class="col-4 d-flex justify-content-center">Name of timer here</div>
+                <div class="col-4 d-flex justify-content-start timerAreaTextSetTime-current-time">Warm-up</div>
                 <div class="col-4"></div>
             </div>
 
             <!-- Progress bar area 1 x 3-->
             <div class="row">
-                <div class="col-4 d-flex justify-content-end">Play/pause buttons here</div>
-                <div class="col-4 d-flex justify-content-center">===============================</div>
-                <div class="col-4 d-flex justify-content-start div-right timerAreaTextSetTime">3:00</div>
+                <div class="col-4  d-flex justify-content-end mt-4"><div><img src="assets/images/play.png"></div></div>
 
+                <div class="col-4 pt-3 mt-3">
+                       <div class="progress align-middle">
+                                <div class="progress-bar progress-bar-success " role="progressbar" aria-valuenow="40"
+                                     aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                </div>
+                       </div>
 
+                </div>
+
+                <div class="col-4 d-flex justify-content-start timerAreaTextSetTime">3:00
+                </div>
             </div>
+        <!--------------------------- Progress Bar Component [END]------->
+
+
+
+
+
+
+
         <!-------- Timer end------->
+
+
+
         <!-- Timer Area Component [END] -------------------------->
 
-</div> <!--end of containter-->
 
 
 
-
+    </div> <!--end of containter-->
 </body>
-
 </html>
