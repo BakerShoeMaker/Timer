@@ -7,8 +7,9 @@ var userInputTime = minutes_1 * 60;
 var timer = new Timer();
 
 window.onload = function(){
+    runTimerSetUp();
     startTimer();
-    console.log("timer loaded.");
+
 
 };
 
@@ -37,20 +38,20 @@ $("#bnt_SaveTimes").on('click',
 
 function runTimerSetUp() {
 
-    var currentTime = moment().format('MMMM Do YYYY, h:mm:ss a');
+    var currentTime = moment().format('MMMM DD, YYYY, h:mm a');
     //Top information
     //$("#TimerTitle").html("<h1>Today's Schedule</h1>");
-    //$("#CurentTime").html(currentTime);
+    $("#CurentTime").html(currentTime);
 
     //Timer #1
         //Timer graphics
         $("#playPause").html("<img src='play.png' >");
-        //$("#playPause").on("click", startTimer);
-        $('#pb').html('<div class="pbBottom"> <div id="pbWidth"class="pbTop"></div></div>');
+        $("#playPause").on("click", startTimer);
+        /*$('#pb').html('<div class="pbBottom"> <div id="pbWidth"class="pbTop"></div></div>');
 
         //Timer #1 information (grab info from modal)
         $('#TimerInfo').html($('#name_1').val());
-        $('#timeTicker').text(minutes_1 +':00');
+        $('#timeTicker').text(minutes_1 +':00');*/
     //Timer #2
     //Timer #3
 
@@ -59,18 +60,22 @@ function runTimerSetUp() {
     //     </div>
 };
 
+
 console.log($("#pb").attr("data-status"));
 
 function startTimer() {
 //Starts the timer
     $('#playPause').click(function () {
-        //timer.start();
-        timer.start({countdown: true, startValues: {seconds: userInputTime}});
+        timer.start();
+        //timer.start({countdown: true, startValues: {seconds: userInputTime}});
         console.log($("#pb").attr("data-status"));
-        console.log("-----------------------------------");
         console.log("You clicked the play/pause button.");
     });
+    timer.addEventListener('secondsUpdated', function (e) {
+        $('#timeTicker').html(timer.getTimeValues().toString());
+    });
 
+    /*--------------------------- Original Code -------------------------------------*/
     $('#chronoExample .pauseButton').click(function () {
      timer.pause();
      });
@@ -83,9 +88,9 @@ function startTimer() {
      timer.reset();
      });
 
-     timer.addEventListener('secondsUpdated', function (e) {
+     /*timer.addEventListener('secondsUpdated', function (e) {
      $('#chronoExample .values').html(timer.getTimeValues().toString());
-     });
+     });*/
 
      timer.addEventListener('started', function (e) {
      $('#chronoExample .values').html(timer.getTimeValues().toString());
@@ -98,8 +103,9 @@ function startTimer() {
      //What happens when the event is complete?
      timer.addEventListener('targetAchieved', function (e) {
      console.log("THE EVENT IS COMPLETE!!!!!!!");
+     /*--------------------------- Original Code -------------------------------------*/
      });
-}
+}//end start
 
 
 function progressBarWidth(){

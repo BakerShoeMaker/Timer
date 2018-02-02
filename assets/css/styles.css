@@ -139,24 +139,16 @@ input{
     width: 10%;
 }
 
-#timeTicker{
-    background-color: #ffb342;
-    /*font-family: "Roboto", sans-serif;*/
-    font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
-}
+
 #ProgressBar{
     background-color: #b1ff70;
-}
-#playPause{
-    background-color: #5ab2ff;
 }
 
 
 .timerAreaTextSetTime-todaysschedule{
     /*font-family: "Anton", sans-serif;*/
     font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .timerAreaTextSetTime-current-time{
@@ -165,6 +157,11 @@ input{
     font-size: 25px;
 }
 
+.h4 {
+
+    font-size: 100px;
+
+}
 .timerAreaTextSetTime-warmup{
     /*font-family: "Anton", sans-serif;*/
     font-family: 'Montserrat', sans-serif;
@@ -177,9 +174,31 @@ input{
     font-size: 80px;
 }
 .progress-bar{
-    height: 60px;
-    border-radius: 50px;
+    /*border: none;*/
+    height: 50px;
+    width: 100%;
+    background-color: #4dff5e;
+
 }
+/*.progress-bar[value]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    height: 50px;
+    width: 100%;
+    border-style: none;
+    background-color: #dcf5ff;
+}
+
+.progress-bar[value]::-webkit-progress-bar{
+   background-color: #dcf5ff;
+    border-radius: 2px;
+    height: 50px;
+    width: 100%;
+    border-style: none;
+}*/
+
 /* ------------- Create Timer page ---------------- */
 
 .modal-body, .modal-footer{

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<meta charset="UTF-8" lang="eng">
 <head>
     <title>Keep your class running smoothly! </title>
     <link rel="stylesheet" href="assets/css/reset.css">
@@ -8,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,700|Anton" rel="stylesheet">
     <script src="https://use.fontawesome.com/0f97643179.js"></script>
     <script src="assets/js/moment-with-locales.js"></script>
-    <!--<script src="assets/js/easytimer.min.js"></script>-->
+    <script src="assets/js/easytimer.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
@@ -17,7 +18,6 @@
 </head>
 
 <body>
-
     <div class="container">
         <!--------------------- Header-LogIn Component [START] -------------------------->
         <div class = "row mr-4 mt-3 ">
@@ -57,13 +57,13 @@
         <!--------------------- Timer Area Component [START] -------------------------->
         <!-- Today's schedule 1 x 1-->
         <div class="row d-flex justify-content-center timerAreaTextSetTime-todaysschedule">
-            <h4>Today's Schedule</h4>
+            <h4> <i class="fa fa-clock-o mr-2"></i>Today's Schedule</h4>
 
         </div>
 
         <!-- Current Time 1 X 1 -->
-        <div class="row d-flex justify-content-center timerAreaTextSetTime-current-time">
-           11:00 am
+        <div id="CurentTime" class="row d-flex justify-content-center timerAreaTextSetTime-current-time">
+
         </div>
         <hr>
         <!--------------------------- Progress Bar Component [START]------->
@@ -76,7 +76,9 @@
 
             <!-- Progress bar area 1 x 3-->
             <div class="row">
-                <div class="col-4  d-flex justify-content-end mt-4"><div><img src="assets/images/play.png"></div></div>
+                <div class="col-4  d-flex justify-content-end mt-4">
+                    <div id="playPause" ></div>
+                </div>
 
                 <div class="col-4 pt-3 mt-3">
                        <div class="progress align-middle">
@@ -84,10 +86,11 @@
                                      aria-valuemin="0" aria-valuemax="100" style="width:60%">
                                 </div>
                        </div>
+                    <!--<progress class="progress-bar" max="100" value="50"></progress>-->
 
                 </div>
 
-                <div class="col-4 d-flex justify-content-start timerAreaTextSetTime">3:00
+                <div id='timeTicker' class="col-4 d-flex justify-content-start timerAreaTextSetTime">05:00
                 </div>
             </div>
         <!--------------------------- Progress Bar Component [END]------->
@@ -108,5 +111,7 @@
 
 
     </div> <!--end of containter-->
+
+<script src="assets/js/timer.js"></script>
 </body>
 </html>
