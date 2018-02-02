@@ -5,6 +5,8 @@ var transition_1 = "";
 var break_1;
 var userInputTime = minutes_1 * 60;
 var timer = new Timer();
+var status = $("#timeTicker").attr("data-play-status");
+
 
 window.onload = function(){
     runTimerSetUp();
@@ -61,15 +63,55 @@ function runTimerSetUp() {
 };
 
 
-console.log($("#pb").attr("data-status"));
+function checkPlayStatus(){
+
+    switch (status){
+        //Status: idle, playing, paused
+
+        //turn to 'playing'
+        case 'idle':
+            $("#playPause").html("<img src='pause.png' >");
+
+            console.log("The play status is: " +status);
+        break;
+
+        //turn to 'pause'
+        case 'playing':
+            $("#playPause").html("<img src='pause.png' >");
+            status = "paused";
+            console.log("The play status is: " +status);
+         break;
+
+        //turn to 'playing'
+        case 'paused':
+            $("#playPause").html("<img src='play.png' >");
+            status = "playing";
+            console.log("The play status is: " +status);
+        break;
+    }
+}
 
 function startTimer() {
 //Starts the timer
     $('#playPause').click(function () {
-        timer.start();
+        if(status == "idle"){
+            timer.start();
+            checkPlayStatus();
+        }
+        if(status == "playing"){
+            timer.pause();
+            checkPlayStatus();
+        }
+
+        if(status == "paused"){
+            timer.start();
+            checkPlayStatus();
+        }
+
+
         //timer.start({countdown: true, startValues: {seconds: userInputTime}});
-        console.log($("#pb").attr("data-status"));
-        console.log("You clicked the play/pause button.");
+
+        //console.log($("#timeTicker").attr("data-play-status"));
     });
     timer.addEventListener('secondsUpdated', function (e) {
         $('#timeTicker').html(timer.getTimeValues().toString());
