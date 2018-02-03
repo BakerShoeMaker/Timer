@@ -3,9 +3,17 @@ var name_1 = "";
 var minutes_1 = "";
 var transition_1 = "";
 var break_1;
-var userInputTime = minutes_1 * 60;
+var userInputTime = 2 * 60;
+var userInputTimeElapsed = userInputTime--;
+var userInputTimeProcess = userInputTime - ((userInputTimeElapsed/userInputTime *100));
+
 var timer = new Timer();
 var status = $("#timeTicker").attr("data-play-status");
+
+//For progress bar calculation
+/*var progressBarMinutes =timer.getTimeValues().minutes;
+var progressBarSeconds =timer.getTimeValues().seconds;
+var progressBarTotalSeconds =timer.getTimeValues().minutes * timer.getTimeValues().seconds;*/
 
 
 window.onload = function(){
@@ -54,27 +62,14 @@ function runTimerSetUp() {
     //     </div>
 };
 
-//Play button is clicked.
+//Play or pause button is clicked.
 $('#playButton').click(function () {
     checkPlayStatus();
-    //activateTimerToPlayOrPause();
-     //console.log($("#timeTicker").attr("data-play-status"));
 });
-
-//Pause button is clicked.
-$/*('#pauseButton').click(function () {
-    timer.pause();
-    //timer.start({countdown: true, startValues: {seconds: userInputTime}});
-    console.log("you clicked the pause button.");
-    checkPlayStatus();
-
-    //activateTimerToPlayOrPause();
-    //console.log($("#timeTicker").attr("data-play-status"));
-});*/
-
 
 //Checks the status of the data-play-status attribute.
 function checkPlayStatus(){
+//For progress bar calculation
 
     switch (status){
         //Status: idle, playing, paused
@@ -82,20 +77,22 @@ function checkPlayStatus(){
         //turn to 'playing'
         case 'idle':
             $("#playButton").html("<img src='pause.png' >");
-            //timer.start();
-            //timer.start({countdown: true, startValues: {seconds: userInputTime}});
-            /*timer.addEventListener('secondsUpdated', function (e) {
-                $('#timeTicker').html(timer.getTimeValues().toString());
-
-            });*/
-            timer.start({countdown: true, startValues: {seconds: 30}, callback: function (timer) {
+            timer.start({countdown: true, startValues: {seconds: userInputTime}, callback: function (timer) {
                 $('#timeTicker').html(
                     timer.getTimeValues().toString(['minutes', 'seconds', ])
                 );
             }});
+            //Get the seconds to calculate the progress bar width.
+            timer.addEventListener('secondsUpdated', function (e) {
+                $('#chronoExample .values').html(timer.getTimeValues().toString());
+                //console.log("Total seconds: " , userInputTime--);
+                console.log("Total seconds: " , userInputTimeProcess);
+
+            });
             status ="playing";
             console.log("The play status is: " +status);
         break;
+
         //turn to 'pause'
         case 'playing':
             $("#playButton").html("<img src='play.png' >");
@@ -124,9 +121,7 @@ function activateTimerToPlayOrPause() {
         //console.log($("#timeTicker").attr("data-play-status"));
     });*/
 
-
-
-    /*--------------------------- Original Code -------------------------------------*/
+  /*--------------------------- Original Code -------------------------------------*/
     $('#chronoExample .pauseButton').click(function () {
      timer.pause();
      });
