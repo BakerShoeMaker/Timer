@@ -1,4 +1,4 @@
-var countDownTime_1 = 5;
+var countDownTime_1 = 4;
 var name_1 = "";
 var minutes_1 = "";
 var transition_1 = "";
@@ -82,11 +82,17 @@ function checkPlayStatus(){
         //turn to 'playing'
         case 'idle':
             $("#playButton").html("<img src='pause.png' >");
-            timer.start();
+            //timer.start();
             //timer.start({countdown: true, startValues: {seconds: userInputTime}});
-            timer.addEventListener('secondsUpdated', function (e) {
+            /*timer.addEventListener('secondsUpdated', function (e) {
                 $('#timeTicker').html(timer.getTimeValues().toString());
-            });
+
+            });*/
+            timer.start({countdown: true, startValues: {seconds: 30}, callback: function (timer) {
+                $('#timeTicker').html(
+                    timer.getTimeValues().toString(['minutes', 'seconds', ])
+                );
+            }});
             status ="playing";
             console.log("The play status is: " +status);
         break;
