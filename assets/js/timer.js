@@ -56,19 +56,13 @@ function runTimerSetUp() {
 
 //Play button is clicked.
 $('#playButton').click(function () {
-    timer.start();
-    //timer.start({countdown: true, startValues: {seconds: userInputTime}});
-    timer.addEventListener('secondsUpdated', function (e) {
-        $('#timeTicker').html(timer.getTimeValues().toString());
-    });
     checkPlayStatus();
-
     //activateTimerToPlayOrPause();
      //console.log($("#timeTicker").attr("data-play-status"));
 });
 
 //Pause button is clicked.
-$('#pauseButton').click(function () {
+$/*('#pauseButton').click(function () {
     timer.pause();
     //timer.start({countdown: true, startValues: {seconds: userInputTime}});
     console.log("you clicked the pause button.");
@@ -76,7 +70,7 @@ $('#pauseButton').click(function () {
 
     //activateTimerToPlayOrPause();
     //console.log($("#timeTicker").attr("data-play-status"));
-});
+});*/
 
 
 //Checks the status of the data-play-status attribute.
@@ -88,23 +82,26 @@ function checkPlayStatus(){
         //turn to 'playing'
         case 'idle':
             $("#playButton").html("<img src='pause.png' >");
-            $('#playButton').attr('id', 'pauseButton');
+            timer.start();
+            //timer.start({countdown: true, startValues: {seconds: userInputTime}});
+            timer.addEventListener('secondsUpdated', function (e) {
+                $('#timeTicker').html(timer.getTimeValues().toString());
+            });
             status ="playing";
-            var statusOfID =$('#playButton').attr('id', 'pauseButton');
             console.log("The play status is: " +status);
-            console.log(statusOfID);
         break;
         //turn to 'pause'
         case 'playing':
-            $("#pauseButton").html("<img src='play.png' >");
-            $('#pauseButton').attr('id', 'playButton');
+            $("#playButton").html("<img src='play.png' >");
+            timer.pause();
             status = "paused";
             console.log("The play status is: " +status);
          break;
 
         //turn to 'playing'
         case 'paused':
-            $("#playButton").html("<img src='play.png' >");
+            $("#playButton").html("<img src='pause.png' >");
+            timer.start();
             status = "playing";
             console.log("The play status is: " +status);
         break;
