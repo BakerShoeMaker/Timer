@@ -10,7 +10,7 @@ var status = $("#timeTicker").attr("data-play-status");
 
 window.onload = function(){
     runTimerSetUp();
-    startTimer();
+    //activateTimerToPlayOrPause();
 
 
 };
@@ -27,17 +27,9 @@ $("#bnt_SaveTimes").on('click',
         $("#MainArea").html("");
         $('#exampleModal').modal('hide');//Close the modal.
         runTimerSetUp();
-
     }
 )
-
-//Start the timer when play button is clicked.
-/*$('#playPause').on('click', function(){
-    console.log("You clicked the play/pause button.");
-    //startTimer();
-});*/
-
-
+//When the app first loads
 function runTimerSetUp() {
 
     var currentTime = moment().format('MMMM DD, YYYY, h:mm a');
@@ -47,8 +39,8 @@ function runTimerSetUp() {
 
     //Timer #1
         //Timer graphics
-        $("#playPause").html("<img src='play.png' >");
-        $("#playPause").on("click", startTimer);
+        $("#playButton").html("<img src='play.png' >");
+        //$("#playButton").on("click", activateTimerToPlayOrPause);
         /*$('#pb').html('<div class="pbBottom"> <div id="pbWidth"class="pbTop"></div></div>');
 
         //Timer #1 information (grab info from modal)
@@ -62,7 +54,32 @@ function runTimerSetUp() {
     //     </div>
 };
 
+//Play button is clicked.
+$('#playButton').click(function () {
+    timer.start();
+    //timer.start({countdown: true, startValues: {seconds: userInputTime}});
+    timer.addEventListener('secondsUpdated', function (e) {
+        $('#timeTicker').html(timer.getTimeValues().toString());
+    });
+    checkPlayStatus();
 
+    //activateTimerToPlayOrPause();
+     //console.log($("#timeTicker").attr("data-play-status"));
+});
+
+//Pause button is clicked.
+$('#pauseButton').click(function () {
+    timer.pause();
+    //timer.start({countdown: true, startValues: {seconds: userInputTime}});
+    console.log("you clicked the pause button.");
+    checkPlayStatus();
+
+    //activateTimerToPlayOrPause();
+    //console.log($("#timeTicker").attr("data-play-status"));
+});
+
+
+//Checks the status of the data-play-status attribute.
 function checkPlayStatus(){
 
     switch (status){
@@ -70,52 +87,41 @@ function checkPlayStatus(){
 
         //turn to 'playing'
         case 'idle':
-            $("#playPause").html("<img src='pause.png' >");
-
+            $("#playButton").html("<img src='pause.png' >");
+            $('#playButton').attr('id', 'pauseButton');
+            status ="playing";
+            var statusOfID =$('#playButton').attr('id', 'pauseButton');
             console.log("The play status is: " +status);
+            console.log(statusOfID);
         break;
-
         //turn to 'pause'
         case 'playing':
-            $("#playPause").html("<img src='pause.png' >");
+            $("#pauseButton").html("<img src='play.png' >");
+            $('#pauseButton').attr('id', 'playButton');
             status = "paused";
             console.log("The play status is: " +status);
          break;
 
         //turn to 'playing'
         case 'paused':
-            $("#playPause").html("<img src='play.png' >");
+            $("#playButton").html("<img src='play.png' >");
             status = "playing";
             console.log("The play status is: " +status);
         break;
     }
 }
 
-function startTimer() {
+
+function activateTimerToPlayOrPause() {
 //Starts the timer
-    $('#playPause').click(function () {
-        if(status == "idle"){
-            timer.start();
-            checkPlayStatus();
-        }
-        if(status == "playing"){
-            timer.pause();
-            checkPlayStatus();
-        }
-
-        if(status == "paused"){
-            timer.start();
-            checkPlayStatus();
-        }
-
-
+ /*   $('#playButton').click(function () {
+        timer.start();
+        console.log("you clicked the play pause button.");
         //timer.start({countdown: true, startValues: {seconds: userInputTime}});
-
         //console.log($("#timeTicker").attr("data-play-status"));
-    });
-    timer.addEventListener('secondsUpdated', function (e) {
-        $('#timeTicker').html(timer.getTimeValues().toString());
-    });
+    });*/
+
+
 
     /*--------------------------- Original Code -------------------------------------*/
     $('#chronoExample .pauseButton').click(function () {
