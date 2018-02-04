@@ -7,8 +7,8 @@ body{
 }
 hr{
     background-color: white;
-    /*height: 1px;*/
-    display: block;
+    width: 60%;
+    align-content: center;
 }
 
 /* ------------- Header ---------------- */
@@ -32,7 +32,6 @@ input{
     border-color: #000032;
     border-top-style: none;
     border-radius: 5px;
-
 }
 
 .nav-item .nav-link{
@@ -114,11 +113,15 @@ input{
     font-size: 50px;
 
 }
-#playPause :hover{
+/*#playPause :hover{
     transform: scale(1.05);
     cursor: hand;
     cursor: pointer;
+}*/
+#ProgressBarWidth{
+    width:0%;
 }
+
 #CurentTime{
     /*font-family: "Roboto", sans-serif;*/
     font-family: 'Montserrat', sans-serif;
@@ -138,7 +141,6 @@ input{
     align-content: center;
     width: 10%;
 }
-
 
 #ProgressBar{
     background-color: #b1ff70;

@@ -1,14 +1,16 @@
-var countDownTime_1 = 4;
+var userCountDownTime = 1;
 var name_1 = "";
 var minutes_1 = "";
 var transition_1 = "";
 var break_1;
-var userInputTime = 2 * 60;
-var userInputTimeElapsed = userInputTime--;
-var userInputTimeProcess = userInputTime - ((userInputTimeElapsed/userInputTime *100));
-
+var userInputTime = userCountDownTime * 60;
+var userInputTimerForProgressBar = userCountDownTime * 60;
 var timer = new Timer();
 var status = $("#timeTicker").attr("data-play-status");
+var widthOfProgressBar = $('#ProgressBarWidth').css('width');
+
+var userInputTimeElapsed;
+var progressBarWidthProcessed;
 
 //For progress bar calculation
 /*var progressBarMinutes =timer.getTimeValues().minutes;
@@ -19,8 +21,6 @@ var progressBarTotalSeconds =timer.getTimeValues().minutes * timer.getTimeValues
 window.onload = function(){
     runTimerSetUp();
     //activateTimerToPlayOrPause();
-
-
 };
 
 $("#bnt_SaveTimes").on('click',
@@ -66,6 +66,17 @@ function runTimerSetUp() {
 $('#playButton').click(function () {
     checkPlayStatus();
 });
+//What happens when the event is complete?
+timer.addEventListener('targetAchieved', function (e) {
+    console.log("THE EVENT IS COMPLETE!!!!!!!");
+    whenFinished();
+});
+function whenFinished(){
+    status = "paused";
+    checkPlayStatus();
+    console.log(status);
+};
+
 
 //Checks the status of the data-play-status attribute.
 function checkPlayStatus(){
@@ -85,9 +96,16 @@ function checkPlayStatus(){
             //Get the seconds to calculate the progress bar width.
             timer.addEventListener('secondsUpdated', function (e) {
                 $('#chronoExample .values').html(timer.getTimeValues().toString());
-                //console.log("Total seconds: " , userInputTime--);
-                console.log("Total seconds: " , userInputTimeProcess);
+                userInputTimeElapsed = userInputTime--;
+                progressBarWidthProcessed = 100 - (userInputTimeElapsed/userInputTimerForProgressBar *100);
 
+                //Increase the width of the progress bar.
+                widthOfProgressBar = (progressBarWidthProcessed) +'%';
+                console.log(userInputTimeElapsed);
+                /*console.log("Total seconds: " , progressBarWidthProcessed );*/
+                console.log("Width of progress bar: " +widthOfProgressBar);
+                console.log("---------------------------------");
+                $('#ProgressBarWidth').css('width',widthOfProgressBar );
             });
             status ="playing";
             console.log("The play status is: " +status);
@@ -146,11 +164,8 @@ function activateTimerToPlayOrPause() {
      $('#chronoExample .values').html(timer.getTimeValues().toString());
      });
 
-     //What happens when the event is complete?
-     timer.addEventListener('targetAchieved', function (e) {
-     console.log("THE EVENT IS COMPLETE!!!!!!!");
-     /*--------------------------- Original Code -------------------------------------*/
-     });
+
+    /*--------------------------- Original Code -------------------------------------*/
 }//end start
 
 
