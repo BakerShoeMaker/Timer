@@ -2,12 +2,13 @@
 body{
     background-color: #000032;
     color: white;
-    /*background-image: url("images/niklas-rhose-14302.jpg");*/
-    /*background-size: auto;*/
+    /*background-image: url("../images/background-leafy-wall.jpg");
+    background-size: auto;
+    background-size: cover;*/
 }
 hr{
     background-color: white;
-    width: 60%;
+    width: 75%;
     align-content: center;
 }
 
@@ -53,6 +54,13 @@ input{
     background-color: red;
 }.div-right{
     background-color: #70b9ff;
+}
+
+.div-middle{
+     background-color: #ff898c;
+ }
+.div-other{
+    background-color: #4f45ff;
 }
 /*#Login, #InputEmail, #InputPassword {*/
 /*width: 33%;*/
@@ -101,16 +109,10 @@ input{
 
 
 /* ------------- Timer page ---------------- */
-.timerHeadText{
-
+#timeTicker {
     /*font-family: "Roboto", sans-serif;*/
     font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
-}
-#timeTicker p{
-    /*font-family: "Roboto", sans-serif;*/
-    font-family: 'Montserrat', sans-serif;
-    font-size: 50px;
+    font-size: 125px;
 
 }
 /*#playPause :hover{
@@ -120,6 +122,10 @@ input{
 }*/
 #ProgressBarWidth{
     width:0%;
+}
+#NextUp{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
 }
 
 #CurentTime{
@@ -145,6 +151,7 @@ input{
 #ProgressBar{
     background-color: #b1ff70;
 }
+
 
 
 .timerAreaTextSetTime-todaysschedule{
@@ -181,6 +188,31 @@ input{
     width: 100%;
     background-color: #4dff5e;
 
+}
+
+#DropDownButton{
+    text-decoration: none;
+    color: white;
+    background-color: #000032;
+    border-color: #000032;
+    border-top-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#AddTimerButton{
+    text-decoration: none;
+    color: white;
+    background-color: #000032;
+    border-color: #000032;
+    font-family: 'Montserrat', sans-serif;
+    border:none;
+}
+
+
+#AddTimer{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: white;
 }
 /*.progress-bar[value]{
     -webkit-appearance: none;

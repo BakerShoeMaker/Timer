@@ -1,4 +1,4 @@
-var userCountDownTime = 1;
+var userCountDownTime = 20;
 var name_1 = "";
 var minutes_1 = "";
 var transition_1 = "";
@@ -42,7 +42,6 @@ function runTimerSetUp() {
 
     var currentTime = moment().format('MMMM DD, YYYY, h:mm a');
     //Top information
-    //$("#TimerTitle").html("<h1>Today's Schedule</h1>");
     $("#CurentTime").html(currentTime);
 
     //Timer #1
@@ -95,7 +94,7 @@ function checkPlayStatus(){
             }});
             //Get the seconds to calculate the progress bar width.
             timer.addEventListener('secondsUpdated', function (e) {
-                $('#chronoExample .values').html(timer.getTimeValues().toString());
+                $('#timeTicker').html(timer.getTimeValues().toString());
                 userInputTimeElapsed = userInputTime--;
                 progressBarWidthProcessed = 100 - (userInputTimeElapsed/userInputTimerForProgressBar *100);
 
