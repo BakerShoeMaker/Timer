@@ -30,14 +30,14 @@
     <favorites_list name="Timer" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5143923">
+    <splitter split-orientation="horizontal" split-proportion="0.43336886">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="timer.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/timer.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="441">
-                  <caret line="54" column="88" lean-forward="false" selection-start-line="54" selection-start-column="73" selection-end-line="54" selection-end-column="88" />
+                <state relative-caret-position="288">
+                  <caret line="253" column="0" lean-forward="false" selection-start-line="253" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
                   <folding>
                     <element signature="e#2449#2456#0" expanded="true" />
                   </folding>
@@ -82,9 +82,11 @@
           <file leaf-file-name="timer.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/js/timer.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="714">
-                  <caret line="48" column="55" lean-forward="false" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
-                  <folding />
+                <state relative-caret-position="430">
+                  <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+                  <folding>
+                    <element signature="n#!!block;n#activateTimerToPlayOrPause#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -112,17 +114,18 @@
       <find>userInputTimeProcess</find>
       <find>playPause</find>
       <find>attr</find>
-      <find>userInputTime</find>
       <find>ProgressBar</find>
       <find>ProgressBarWidth</find>
       <find>timerHeadText</find>
       <find>timerAreaTextSetTime</find>
-      <find>checkPlayStatus</find>
-      <find>playButton</find>
       <find>timeTicker</find>
       <find>exampleModal</find>
       <find>AddTimerModal</find>
       <find>AddTimerButton</find>
+      <find>NameOfLesson_1</find>
+      <find>userInputTime</find>
+      <find>playButton</find>
+      <find>checkPlayStatus</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -791,12 +794,12 @@
       <workItem from="1517767546762" duration="8846000" />
       <workItem from="1517781152745" duration="2713000" />
       <workItem from="1517791031085" duration="10926000" />
-      <workItem from="1517881704350" duration="4853000" />
+      <workItem from="1517881704350" duration="8398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216593000" />
+    <option name="totallyTimeSpent" value="220138000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -823,7 +826,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32664436" sideWeight="0.48720682" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19175027" sideWeight="0.63489497" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19175027" sideWeight="0.63489497" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17697228" sideWeight="0.68175936" order="0" side_tool="false" content_ui="combo" />
@@ -1155,8 +1158,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/timer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="54" column="88" lean-forward="false" selection-start-line="54" selection-start-column="73" selection-end-line="54" selection-end-column="88" />
+        <state relative-caret-position="288">
+          <caret line="253" column="0" lean-forward="false" selection-start-line="253" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
           <folding>
             <element signature="e#2449#2456#0" expanded="true" />
           </folding>
@@ -1165,9 +1168,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/timer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="48" column="55" lean-forward="false" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
-          <folding />
+        <state relative-caret-position="430">
+          <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#activateTimerToPlayOrPause#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

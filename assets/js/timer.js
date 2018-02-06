@@ -1,8 +1,7 @@
-var userCountDownTime = minutes_1;
 var nameOfTimer_1 = "Timer 1";
 var nameOfLesson_1 = "";
 var name_1 = "";
-var minutes_1 = "";
+var minutes_1 = 5;
 
 var nameOfLesson_2 = "";
 var name_2 = "";
@@ -11,6 +10,8 @@ var minutes_2 = "";
 var nameOfLesson_3 = "";
 var name_3 = "";
 var minutes_3 = "";
+
+var userCountDownTime =5;
 
 var userInputTime = userCountDownTime * 60;
 var userInputTimerForProgressBar = userCountDownTime * 60;
@@ -21,15 +22,10 @@ var widthOfProgressBar = $('#ProgressBarWidth').css('width');
 var userInputTimeElapsed;
 var progressBarWidthProcessed;
 
-//For progress bar calculation
-/*var progressBarMinutes =timer.getTimeValues().minutes;
-var progressBarSeconds =timer.getTimeValues().seconds;
-var progressBarTotalSeconds =timer.getTimeValues().minutes * timer.getTimeValues().seconds;*/
-
-
 window.onload = function(){
     runTimerSetUp();
     //activateTimerToPlayOrPause();
+    minutes_1 = userCountDownTime;
 };
 
 $("#bnt_SaveTimes").on('click',
@@ -37,12 +33,12 @@ $("#bnt_SaveTimes").on('click',
     {
         console.log("You clicked the save button!!");
         //Fill in values for the first timer
-
         nameOfLesson_1 = $('#NameOfLesson_1').val();
+        $('#NameOfTimerTitle_1').html(nameOfLesson_1);
         name_1 = $('#name_1').val();
         minutes_1 = $('#LessonMinutes_1').val();
+        userCountDownTime = minutes_1;
         $('#timeTicker').html(+minutes_1 +':00');
-
 
         $("#MainArea").html("");
 
@@ -50,6 +46,8 @@ $("#bnt_SaveTimes").on('click',
         console.log("Name of Timer: " +nameOfTimer_1);
         console.log("Name of Lesson: " +nameOfLesson_1);
         console.log("Minutes: " +minutes_1);
+        console.log("user input time: " +userCountDownTime);
+
         //runTimerSetUp();
     }
 )
@@ -62,6 +60,10 @@ function runTimerSetUp() {
     //Top information
     $("#CurentTime").html(currentTime);
 
+
+    //Add default time OR load default times from the database;
+    $('#timeTicker').html('05:00');
+
     //Timer #1
         //Timer graphics
         $("#playButton").html("<img src='play.png' >");
@@ -73,9 +75,6 @@ function runTimerSetUp() {
     //Timer #2
     //Timer #3
 
-    // <div class="progress">
-    //     <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-    //     </div>
 };
 
 //Play or pause button is clicked.
@@ -104,7 +103,7 @@ function checkPlayStatus(){
         //turn to 'playing'
         case 'idle':
             $("#playButton").html("<img src='pause.png' >");
-            timer.start({countdown: true, startValues: {seconds: userInputTime}, callback: function (timer) {
+            timer.start({countdown: true, startValues: {seconds: userCountDownTime *60}, callback: function (timer) {
                 $('#timeTicker').html(
                     timer.getTimeValues().toString(['minutes', 'seconds', ])
                 );
@@ -193,22 +192,7 @@ function progressBarWidth(){
 }
 
 //Problems
-// How to make the timer stop when it's finished?
-// How to update the width every second?
-//***************** TIMER START ***********************
-
-//***************** TIMER END ***********************
-
-
-//ADD TIMER: user selects the 'add timer' button (modal popup?)
-    //user adds name of timer (has a default name).
-    // user selects from radio button (work time or break).
-    //user selects time from (selection menu).
-    //user can save the message.
-
 //Timer appears on the screen (name of timer, time, play/pause button, progress bar, count down time)
-    //User can start/stop timer.
-    //Timer progress bar and timer will count down.
     //Only one timer can operate at a time.
     //When one timer ends the other timer will start.
 
