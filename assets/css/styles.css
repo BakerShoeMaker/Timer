@@ -67,7 +67,11 @@ input{
 /*float: left*/
 /*}*/
 
-
+.myProfileFonts{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 18px;
+}
 /* ------------- Index page ---------------- */
 .jumbotron{
 
@@ -77,8 +81,9 @@ input{
     font-family: 'Montserrat', sans-serif;
     /*font-family: 'Roboto', sans-serif;*/
     font-size: 45px;
-
 }
+
+
 .lead{
     /*
     font-family: 'Roboto', sans-serif;

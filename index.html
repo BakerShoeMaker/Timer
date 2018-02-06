@@ -19,6 +19,47 @@
 
 <body>
     <div class = "container-fluid">
+
+        <!--------------------- Sign Up Modal [START] -------------------------->
+        <div class="modal" id="SignUpForm" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12  d-flex justify-content-center px-2 ">Enter your information below</div>
+                        </div>
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
+
+                            </div>
+                            <div class="form-group">
+                                <label for="signUpFormInputPassword">Enter your Password</label>
+                                <input type="password" class="form-control" id="signUpFormInputPassword" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="signUpFormInputPasswordConfirm">Confirm your Password</label>
+                                <input type="password" class="form-control" id="signUpFormInputPasswordConfirm" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </form>
+                 </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--------------------- Sign Up Modal [stop] -------------------------->
+
         <!--------------------- Header Component [START] -------------------------->
 
         <div class = "row  pt-3">
@@ -46,26 +87,16 @@
         <div class="row">
             <div class="col-2 "></div>
                 <div class="col-8 d-flex justify-content-center ">
-
                     <div id ="MainArea" class="col text-center">
                             <div class="jumbotron jumbotron-fluid">
 
                                 <h1 class="display-4">KEEP YOUR CLASS ON TRACK!</h1>
                                 <p class="lead">A simple visual tool to help keep your class running smoothly.</p>
-
-
                                 <div class="mt-5"><button id="bnt_SignUp" type="button" class="btn btn-outline-primary btn-lg"
-                                 data-toggle="modal" data-target="#exampleModal"> Sign up</button>
+                                 data-toggle="modal" data-target="#SignUpForm"> Sign up</button>
                                 </div>
-
                             </div>
                     </div>
-
-
-
-
-
-
                 </div>
             <div class="col-2 "></div>
 

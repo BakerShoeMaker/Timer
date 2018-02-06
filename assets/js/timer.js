@@ -199,4 +199,8 @@ function progressBarWidth(){
 // ADDING ANOTHER TIMER: User can add another timer
     //Click the add timer button.
 
-
+//Next steps
+    //Fix bootstrap component.
+    //Add React components.
+    //Load data from database for default data.
+    // When new data is saved, it is updated in the database.
