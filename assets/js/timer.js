@@ -1,8 +1,17 @@
-var userCountDownTime = 20;
+var userCountDownTime = minutes_1;
+var nameOfTimer_1 = "Timer 1";
+var nameOfLesson_1 = "";
 var name_1 = "";
 var minutes_1 = "";
-var transition_1 = "";
-var break_1;
+
+var nameOfLesson_2 = "";
+var name_2 = "";
+var minutes_2 = "";
+
+var nameOfLesson_3 = "";
+var name_3 = "";
+var minutes_3 = "";
+
 var userInputTime = userCountDownTime * 60;
 var userInputTimerForProgressBar = userCountDownTime * 60;
 var timer = new Timer();
@@ -27,16 +36,25 @@ $("#bnt_SaveTimes").on('click',
     function()
     {
         console.log("You clicked the save button!!");
-        //Assign the form values to variables.
+        //Fill in values for the first timer
+
+        nameOfLesson_1 = $('#NameOfLesson_1').val();
         name_1 = $('#name_1').val();
-        minutes_1 = $('#minutes_1').val();
-        transition_1 = $('#transition_1').val();
-        break_1 = $().val();
+        minutes_1 = $('#LessonMinutes_1').val();
+        $('#timeTicker').html(+minutes_1 +':00');
+
+
         $("#MainArea").html("");
-        $('#exampleModal').modal('hide');//Close the modal.
-        runTimerSetUp();
+
+        $('#AddTimerModal').modal('hide');//Close the modal.
+        console.log("Name of Timer: " +nameOfTimer_1);
+        console.log("Name of Lesson: " +nameOfLesson_1);
+        console.log("Minutes: " +minutes_1);
+        //runTimerSetUp();
     }
 )
+
+
 //When the app first loads
 function runTimerSetUp() {
 
@@ -47,7 +65,6 @@ function runTimerSetUp() {
     //Timer #1
         //Timer graphics
         $("#playButton").html("<img src='play.png' >");
-        //$("#playButton").on("click", activateTimerToPlayOrPause);
         /*$('#pb').html('<div class="pbBottom"> <div id="pbWidth"class="pbTop"></div></div>');
 
         //Timer #1 information (grab info from modal)
