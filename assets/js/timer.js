@@ -60,7 +60,6 @@ function runTimerSetUp() {
     //Top information
     $("#CurentTime").html(currentTime);
 
-
     //Add default time OR load default times from the database;
     $('#timeTicker').html('05:00');
 
